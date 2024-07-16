@@ -1,0 +1,191 @@
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #e9e9e9;
+}
+  
+nav ul li {
+    float: left;
+    display: block;
+    padding: 17px;
+    font-size: 20px;
+    font-family: Helvetica;
+}
+
+nav ul li:hover {
+    background-color: rgb(210, 210, 210);
+    color: rgb(0, 121, 145);
+}
+
+.headerImageSection {
+    position: relative;
+    width: 100%;
+}
+
+.headerImage {
+    display: block;
+    width: 100%;
+    height: 400px
+}
+
+.introduction {
+    position: absolute;
+    width: 100%;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: black;
+    text-align: center;
+    color: white;
+    font-size: 26px;
+    opacity: 0;
+    transition: opacity 3s ease;
+    pointer-events: none;
+}
+
+.headerImageSection:hover .introduction {
+    opacity:0.6;
+    pointer-events: auto;
+}
+
+.introduction:hover {
+    opacity: 0.6;
+}
+
+.headshot {
+    display: block;
+    width: 150px;
+    height: 195px;
+    border-radius: 100%;
+    overflow: hidden;
+    margin: 35px auto;
+    border-color: rgb(255, 255, 255);
+    border-style: solid;
+}
+
+.webDeveloper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10px;
+    font-family: Helvetica;
+    color: rgb(0, 121, 145);
+}
+
+.innerHeading {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.doneSpace {
+    background-color: rgb(250, 250, 250);
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    padding: 20px;
+}
+
+.doneColumn {
+    max-width: 800px;
+}
+
+.babyName{
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+    padding-top: 20px;
+}
+
+.medical {
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+    padding-top: 20px;
+}
+
+.babyName img {
+    margin-right: 20px;
+    border-radius: 2%;
+    max-width: 350px;
+    height: 200px;
+}
+
+.medical img {
+    margin-right: 20px;
+    border-radius: 2%;
+    max-width: 350px;
+    height: 200px;
+}
+
+.babyName p {
+    max-width: 100%;
+    font-size: 12.5px;
+}
+
+.medical p {
+    max-width: 100%;
+    font-size: 12.5px;
+}
+
+@media (max-width: 800px) {
+    .babyName, .medical {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .babyName img, .medical img {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+}
+
+.spacer {
+    padding-bottom: 25px;
+    font-family: Helvetica;
+    color: rgb(0, 121, 145);
+    background-color: rgb(250, 250, 250);
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+
+.photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+
+.photoSpace{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.photo img {
+    max-width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 1000px) and (min-width: 801px) {
+    .photoSpace {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 800px) and (min-width: 601px) {
+    .photoSpace {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .photoSpace {
+        grid-template-columns: 1fr;
+    }
+}
+
+
